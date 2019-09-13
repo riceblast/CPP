@@ -18,6 +18,12 @@
     <ClInclude Include="LinkNode.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="DLinkNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CirLinkNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructure.cpp">

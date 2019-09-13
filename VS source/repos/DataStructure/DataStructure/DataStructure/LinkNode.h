@@ -1,5 +1,5 @@
+#ifndef LINKNODE_H
 #define LINKNODE_H
-#ifdef LINKNODE_H
 #include <stdlib.h>
 #include <stdio.h>
 typedef int ElemType;
@@ -8,6 +8,8 @@ typedef struct LNode {
 	ElemType data;
 	LNode* next;
 } LinkNode;
+
+
 
 //插入元素：头插法
 void InsertElement(LinkNode*& L, int a[], int n) {
@@ -20,12 +22,16 @@ void InsertElement(LinkNode*& L, int a[], int n) {
 	}
 }
 
+
+
 void CreatListF(LinkNode*& L, int a[], int n) {
 	L = (LinkNode*)malloc(sizeof(LNode));//新建了一个空表，L指向头节点
 	L->next= NULL;
 	//依次取出数组中的值并填入到节点中
 	InsertElement(L, a, n);//调用插入方法
 	}
+
+
 
 //插入元素：尾插法
 void CreatListR(LinkNode*& L, int a[], int n) {
@@ -42,6 +48,8 @@ void CreatListR(LinkNode*& L, int a[], int n) {
 	r->next = NULL;//尾结点的指针指向null
 }
 
+
+
 //删除线性表
 void DestroyList(LinkNode* L) {
 	LinkNode* pre = L;//头指针
@@ -55,6 +63,8 @@ void DestroyList(LinkNode* L) {
 	free(pre);
 }
 
+
+
 //返回链表长度(数据结点个数)
 int ListLength(LinkNode* L) {
 	LinkNode* p = L;
@@ -66,6 +76,8 @@ int ListLength(LinkNode* L) {
 	return n;
 }
 
+
+
 //依次输出单链表
 void DispList(LinkNode* L) {
 	LinkNode* p = L->next;
@@ -74,6 +86,8 @@ void DispList(LinkNode* L) {
 		p = p->next;
 	}
 }
+
+
 
 //插入数据元素
 bool ListInsert(LinkNode* L, int i,ElemType d) {
@@ -95,6 +109,8 @@ bool ListInsert(LinkNode* L, int i,ElemType d) {
 	return true;
 }
 
+
+
 //数据删除
 bool ListDelete(LinkNode* L, int i, ElemType& e) {
 	if (i <= 0)
@@ -115,6 +131,8 @@ bool ListDelete(LinkNode* L, int i, ElemType& e) {
 	free(temp); 
 	return true;
 }
+
+
 
 //例：2.6（P52）
 void split(LinkNode* L, LinkNode*& L1, LinkNode*& L2) {
@@ -141,6 +159,8 @@ void split(LinkNode* L, LinkNode*& L1, LinkNode*& L2) {
 	r1->next = NULL;
 }
 
+
+
 //例：2.7（P53）
 void DelMaxNode(LinkNode* L) {
 	LinkNode* pre, * p, * maxpre, * maxp;
@@ -161,6 +181,9 @@ void DelMaxNode(LinkNode* L) {
 	free(maxp);
 }
 
+
+
+//例2.8(p53)
 void Sort(LinkNode* L) {
 	//首先将线性表拆成（头结点+首节点）和剩下元素两个部分
 	LinkNode* pre ;//pre代表插入的前驱结点
@@ -179,6 +202,7 @@ void Sort(LinkNode* L) {
 		pre->next = p;
 		p = q;
 	}
+
 }
 
 #endif

@@ -154,6 +154,8 @@
     <ClCompile Include="DataStructure.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CirLinkNode.h" />
+    <ClInclude Include="DLinkNode.h" />
     <ClInclude Include="LinkNode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
